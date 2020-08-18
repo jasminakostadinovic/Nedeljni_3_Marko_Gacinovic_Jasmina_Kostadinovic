@@ -1,0 +1,58 @@
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].Cookbook'))
+DROP DATABASE Cookbook;
+
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE NAME = 'Cookbook')
+	CREATE DATABASE Cookbook;
+
+GO
+USE Cookbook;
+
+--Droping tables
+
+IF  EXISTS (SELECT * FROM sys.objects 
+	WHERE NAME = 'tblIngredients')
+	DROP TABLE tblIngredients
+
+IF  EXISTS (SELECT * FROM sys.objects 
+	WHERE NAME = 'tblShoppingList')
+	DROP TABLE tblShoppingList
+
+IF  EXISTS (SELECT * FROM sys.objects 
+	WHERE NAME = 'tblRecipe')
+	DROP TABLE tblRecipe
+
+IF  EXISTS (SELECT * FROM sys.objects 
+	WHERE NAME = 'tblUserData')
+	DROP TABLE tblUserData
+
+--Creating tables
+
+CREATE TABLE tblUserData
+	(UserDataID int primary key identity(1,1),
+	GivenName nvarchar(50) not null,
+	Surname nvarchar(50) not null,
+	Username nvarchar(50)not null unique,
+	[Password] char(1000)not null);
+
+CREATE TABLE tblRecipe
+	(RecipeID int primary key identity(1,1),
+	UserDataID int foreign key(UserDataID) references tblUserData(UserDataID),
+	[Name] nvarchar(50),
+	[Type] nvarchar(50),
+	[Description] nvarchar(500),
+	DateCreated datetime,
+	PersonsCount int);
+
+CREATE TABLE tblIngredients
+	(IngredientsID int primary key identity(1,1),
+	[Name] nvarchar(50),
+	Amount int,
+	RecipeID int foreign key(RecipeID) references tblRecipe(RecipeID));
+
+CREATE TABLE tblShoppingList
+	(ShoppingListID int primary key identity(1,1),
+	IngredientName nvarchar(50),
+	Amount int,
+	Owned bit,
+	RecipeID int foreign key(RecipeID) references tblRecipe(RecipeID),
+	UserDataID int foreign key(UserDataID) references tblUserData(UserDataID));
