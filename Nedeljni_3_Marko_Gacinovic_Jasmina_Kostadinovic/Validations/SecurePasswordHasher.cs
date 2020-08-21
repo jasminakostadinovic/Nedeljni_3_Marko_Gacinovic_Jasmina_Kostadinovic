@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.Validations
+namespace Cookbook.Validations
 {
     public static class SecurePasswordHasher
     {

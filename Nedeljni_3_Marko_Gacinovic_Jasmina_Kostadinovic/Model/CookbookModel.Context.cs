@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.Model
+namespace Cookbook.Model
 {
     using System;
     using System.Data.Entity;
