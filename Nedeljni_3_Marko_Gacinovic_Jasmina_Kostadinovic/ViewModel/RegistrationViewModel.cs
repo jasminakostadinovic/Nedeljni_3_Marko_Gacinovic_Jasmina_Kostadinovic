@@ -7,6 +7,7 @@ using Cookbook.Command;
 using Cookbook.Validations;
 using System.Windows;
 using Cookbook.View.User;
+using Cookbook.ViewModel.User;
 
 namespace Cookbook.ViewModel
 {

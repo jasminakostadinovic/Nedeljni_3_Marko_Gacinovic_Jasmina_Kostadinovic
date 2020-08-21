@@ -1,6 +1,5 @@
 ﻿using Cookbook.Model;
 using Cookbook.View.User;
-using Cookbook.ViewModel;
 
 namespace Cookbook.ViewModel.User
 {

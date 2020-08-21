@@ -1,21 +1,15 @@
-﻿using Cookbook;
-using Cookbook.Command;
+﻿using Cookbook.Command;
 using Cookbook.View.Admin;
-using Cookbook.View.User;
-using Cookbook.ViewModel;
 using Cookbook.Model;
 using Cookbook.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Cookbook.ViewModel.User;
+using Cookbook.View.User;
 
 namespace Cookbook.ViewModel
 {
-    class MainWindowViewModel : ViewModelBase
+	class MainWindowViewModel : ViewModelBase
     {
 		#region Fields
 		private string userName;

@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+        mc:Ignorable="d"
       Title="User" Background="#2e3137" Height="450" Width="850" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -35,17 +35,12 @@
                 <DataGridTemplateColumn  Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Button x:Name="btnDelete" Content="Delete"  HorizontalAlignment="Right"
-                            Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}},
-                                              Path=DataContext.DeleteRecipe}"
-                            CommandParameter="{Binding}"/>
+                            <StackPanel Orientation="Horizontal">                      
                                 <Button Name="btnUpdate" Content="Update"  HorizontalAlignment="Left"
                             Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}},
                                               Path=DataContext.UpdateRecipe}"
                             CommandParameter="{Binding}"/>
                             </StackPanel>
-
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -56,10 +51,10 @@
                 VerticalAlignment="Top" Width="auto"  
                 Command="{Binding Logout, UpdateSourceTrigger=PropertyChanged}"
                 Background="#545d6a" Foreground="White"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Create recipe" Name="btnAddNewClinicMaintenance" HorizontalAlignment="Left" 
+        
+        <Button Grid.Column="1" Grid.Row="1" Content="Create recipe" Name="btnAddRecipe" HorizontalAlignment="Left" 
                 VerticalAlignment="Top" Width="auto"  
-                Command="{Binding CreateRecipe, UpdateSourceTrigger=PropertyChanged}"
+                Command="{Binding AddNewRecipe, UpdateSourceTrigger=PropertyChanged}"
                 Background="#545d6a" Foreground="White"/>
     </Grid>
 </Window>
-
