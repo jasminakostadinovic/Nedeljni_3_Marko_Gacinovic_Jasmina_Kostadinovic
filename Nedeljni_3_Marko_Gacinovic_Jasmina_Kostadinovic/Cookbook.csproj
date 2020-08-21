@@ -81,6 +81,7 @@
       <DependentUpon>CookbookModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\DataAccess.cs" />
+    <Compile Include="Model\Recipe.cs" />
     <Compile Include="Model\tblIngredient.cs">
       <DependentUpon>CookbookModel.tt</DependentUpon>
     </Compile>
@@ -98,7 +99,9 @@
     <Compile Include="ViewModel\Admin\DeleteRecipeModel.cs" />
     <Compile Include="ViewModel\Admin\UpdateRecipeByAdminModel.cs" />
     <Compile Include="ViewModel\HealtcareDBRepository.cs" />
+    <Compile Include="ViewModel\LogoutViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\RecipesData.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\User\AddNewRecipeModel.cs" />
     <Compile Include="ViewModel\User\UpdadeRecipeByUserModel.cs" />

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 
 namespace Cookbook.Model
 {
@@ -51,7 +52,7 @@ namespace Cookbook.Model
 				using (var conn = new CookbookEntities())
 				{
 					if (conn.tblRecipes.Any())
-						return conn.tblRecipes.ToList();
+						return conn.tblRecipes.Include(x => x.tblUserData).ToList();
 					return new List<tblRecipe>();
 				}
 			}

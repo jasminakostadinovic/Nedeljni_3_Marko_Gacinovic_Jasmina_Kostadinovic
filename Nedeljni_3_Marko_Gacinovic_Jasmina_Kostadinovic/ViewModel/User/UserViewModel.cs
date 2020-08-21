@@ -1,12 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Cookbook.Model;
+using Cookbook.View.User;
+using Cookbook.ViewModel;
 
 namespace Cookbook.ViewModel.User
 {
-    class UserViewModel
+    class UserViewModel : LogoutViewModel
     {
+        #region Fields
+        private readonly UserView userView;
+        private readonly DataAccess db = new DataAccess();
+        private RecipesData recipesData;
+        #endregion
+        #region Constructors
+        public UserViewModel(UserView userView)
+        {
+            this.userView = userView;
+            RecipesData = new RecipesData();
+        }
+        #endregion
+        #region Properties
+        public RecipesData RecipesData
+        {
+            get
+            {
+                return recipesData;
+            }
+            set
+            {
+                recipesData = value;
+                OnPropertyChanged(nameof(RecipesData));
+            }
+        }
+        #endregion
+        #region Methods
+        protected override void ExitExecute()
+        {
+            MainWindow loginWindow = new MainWindow();
+            userView.Close();
+            loginWindow.Show();
+        }
+        #endregion
     }
 }
