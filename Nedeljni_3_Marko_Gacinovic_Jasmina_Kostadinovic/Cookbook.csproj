@@ -79,6 +79,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CookbookModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\DataAccess.cs" />
     <Compile Include="Model\tblIngredient.cs">
       <DependentUpon>CookbookModel.tt</DependentUpon>
     </Compile>
@@ -91,6 +92,7 @@
     <Compile Include="Model\tblUserData.cs">
       <DependentUpon>CookbookModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Validations\SecurePasswordHasher.cs" />
     <Compile Include="ViewModel\Admin\AdminViewModel.cs" />
     <Compile Include="ViewModel\Admin\DeleteRecipeModel.cs" />
     <Compile Include="ViewModel\Admin\UpdateRecipeByAdminModel.cs" />
