@@ -29,6 +29,21 @@ namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.Model
 			}
 		}
 
+		internal tblUserData LoadUserByUsername(string userName)
+		{
+			try
+			{
+				using (var conn = new CookbookEntities())
+				{
+					return conn.tblUserDatas.FirstOrDefault(x => x.Username == userName);
+				}
+			}
+			catch (Exception)
+			{
+				return null;
+			}
+		}
+
 		internal List<tblRecipe> LoadRecipes()
 		{
 			try
