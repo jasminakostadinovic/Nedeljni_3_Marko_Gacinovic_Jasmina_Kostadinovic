@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.Properties
+namespace Cookbook.Properties
 {
 
 

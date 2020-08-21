@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.ViewModel
+namespace Cookbook.ViewModel
 {
     class ViewModelBase : INotifyPropertyChanged
     {

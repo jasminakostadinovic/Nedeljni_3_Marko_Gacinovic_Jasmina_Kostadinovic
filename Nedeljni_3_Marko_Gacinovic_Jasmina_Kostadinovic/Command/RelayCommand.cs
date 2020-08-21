@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.Command
+namespace Cookbook.Command
 {
 	class RelayCommand : ICommand
 	{

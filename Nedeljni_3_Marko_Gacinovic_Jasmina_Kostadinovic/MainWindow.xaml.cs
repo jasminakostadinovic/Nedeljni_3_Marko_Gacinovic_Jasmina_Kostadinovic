@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic
+namespace Cookbook
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

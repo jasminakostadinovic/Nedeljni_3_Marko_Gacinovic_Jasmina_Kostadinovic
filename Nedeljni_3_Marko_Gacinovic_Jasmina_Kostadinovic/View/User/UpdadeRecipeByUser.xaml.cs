@@ -1,7 +1,7 @@
-﻿using Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.ViewModel.User;
+﻿using Cookbook.ViewModel.User;
 using System.Windows;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.View.User
+namespace Cookbook.View.User
 {
     /// <summary>
     /// Interaction logic for UpdadeRecipeByUser.xaml

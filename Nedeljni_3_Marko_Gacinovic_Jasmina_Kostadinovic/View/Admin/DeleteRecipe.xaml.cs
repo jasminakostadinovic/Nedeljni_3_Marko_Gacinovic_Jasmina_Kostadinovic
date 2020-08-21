@@ -1,7 +1,7 @@
-﻿using Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.ViewModel.Admin;
+﻿using Cookbook.ViewModel.Admin;
 using System.Windows;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic.View.Admin
+namespace Cookbook.View.Admin
 {
     /// <summary>
     /// Interaction logic for DeleteRecipe.xaml

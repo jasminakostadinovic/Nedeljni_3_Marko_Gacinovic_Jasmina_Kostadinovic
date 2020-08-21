@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic
+namespace Cookbook
 {
     /// <summary>
     /// Interaction logic for App.xaml
