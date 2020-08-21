@@ -55,7 +55,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\Admin\AdminViewModel.cs" />
+    <Compile Include="ViewModel\Admin\DeleteRecipeModel.cs" />
+    <Compile Include="ViewModel\Admin\UpdateRecipeByAdminModel.cs" />
+    <Compile Include="ViewModel\User\AddNewRecipeModel.cs" />
+    <Compile Include="ViewModel\User\UpdadeRecipeByUserModel.cs" />
+    <Compile Include="ViewModel\User\UserViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\Admin\AdminView.xaml.cs">
+      <DependentUpon>AdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\DeleteRecipe.xaml.cs">
+      <DependentUpon>DeleteRecipe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UpdateRecipeByAdmin.xaml.cs">
+      <DependentUpon>UpdateRecipeByAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\AddNewRecipe.xaml.cs">
+      <DependentUpon>AddNewRecipe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\UpdadeRecipeByUser.xaml.cs">
+      <DependentUpon>UpdadeRecipeByUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +93,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Admin\AdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\DeleteRecipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\UpdateRecipeByAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\User\AddNewRecipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\User\UpdadeRecipeByUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\User\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -98,10 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\Admin\" />
-    <Folder Include="ViewModel\User\" />
-    <Folder Include="View\Admin\" />
-    <Folder Include="View\User\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
