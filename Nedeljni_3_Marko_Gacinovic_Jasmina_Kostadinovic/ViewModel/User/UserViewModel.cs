@@ -14,6 +14,7 @@ namespace Cookbook.ViewModel.User
         private readonly DataAccess db = new DataAccess();
         private RecipesData recipesData;
         private tblUserData user;
+        private tblRecipe recipe;
         #endregion
         #region Constructors
         public UserViewModel(UserView userView, tblUserData user)
@@ -34,6 +35,14 @@ namespace Cookbook.ViewModel.User
             {
                 recipesData = value;
                 OnPropertyChanged(nameof(RecipesData));
+            }
+        }
+
+        public tblRecipe Recipe
+        {
+            get { return recipe; }
+            set { recipe = value;
+                OnPropertyChanged("Recipe");
             }
         }
         #endregion
@@ -75,6 +84,45 @@ namespace Cookbook.ViewModel.User
                 System.Diagnostics.Debug.WriteLine("Exception" + ex.Message.ToString());                
             }
         }
+
+        private ICommand updateRecipe;
+        public ICommand UpdateRecipe
+        {
+            get
+            {
+                if (updateRecipe == null)
+                {
+                    updateRecipe = new RelayCommand(param => UpdateRecipeExecute(), param => CanUpdateRecipeExecute());
+                }
+                return updateRecipe;
+            }
+            
+        }
+
+        private bool CanUpdateRecipeExecute()
+        {
+            return true;
+        }
+
+        private void UpdateRecipeExecute()
+        {
+            try
+            {
+                UpdadeRecipeByUser updateRecipe = new UpdadeRecipeByUser(recipe);
+                updateRecipe.ShowDialog();
+
+                // updating the lists view
+                if ((updateRecipe.DataContext as UpdadeRecipeByUserModel).IsUpdateRecipe == true)
+                {
+                    RecipesData.Recipes = db.LoadRecipes();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception" + ex.Message.ToString());
+            }
+        }
+
         #endregion
 
         #region Methods

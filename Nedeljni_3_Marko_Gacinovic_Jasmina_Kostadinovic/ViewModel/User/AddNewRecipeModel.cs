@@ -75,7 +75,7 @@ namespace Cookbook.ViewModel.User
 
                     string type = recipe.Type.ToUpper();
 
-                    // gender validation
+                    // type validation
                     if ((type == "A" || type == "M" || type == "D"))
                     {
                         newRecipe.Type = recipe.Type;
