@@ -2,10 +2,6 @@
 using Cookbook.Model;
 using Cookbook.View.User;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -86,7 +82,7 @@ namespace Cookbook.ViewModel.User
                     }
 
                     newRecipe.Description = recipe.Description;
-                    newRecipe.DateCreated = recipe.DateCreated;
+                    newRecipe.DateCreated = DateTime.Now;
                     newRecipe.PersonsCount = recipe.PersonsCount;
 
                     newRecipe.RecipeID = recipe.RecipeID;
