@@ -115,7 +115,7 @@ namespace Cookbook.ViewModel
                 {
                     if (!db.IsUniqueUsername(Username))
                     {
-                        validationMessage = "Username number must be unique!";
+                        validationMessage = "Username must be unique!";
                         CanSave = false;
                     }
                 }
@@ -123,7 +123,7 @@ namespace Cookbook.ViewModel
                 {
                     if (Password.Length < 5)
                     {
-                        validationMessage = "Password must contain at least 5 characters!";
+                        validationMessage = "Password must contains at least 5 characters!";
                         CanSave = false;
                     }
                 }
