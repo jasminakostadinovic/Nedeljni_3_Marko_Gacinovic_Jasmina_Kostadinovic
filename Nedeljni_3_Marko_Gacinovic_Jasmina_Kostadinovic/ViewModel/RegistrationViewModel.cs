@@ -180,8 +180,9 @@ namespace Cookbook.ViewModel
                 }                              
                 else
                 {
+                    var newUser = db.LoadUserByUsername(Username);
                     MessageBox.Show("The new user is sucessfully created.");
-                    UserView userView = new UserView();
+                    UserView userView = new UserView(newUser);
                     registrationView.Close();
                     userView.Show();
                     return;

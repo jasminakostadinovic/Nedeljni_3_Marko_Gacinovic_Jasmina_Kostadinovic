@@ -69,7 +69,7 @@ namespace Cookbook.ViewModel
 				var user= db.LoadUserByUsername(userName);
 				if (user != null)
 				{
-					UserView userView = new UserView();
+					UserView userView = new UserView(user);
 					loginView.Close();
 					userView.Show();
 					return;

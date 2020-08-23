@@ -1,4 +1,5 @@
-﻿using Cookbook.ViewModel.User;
+﻿using Cookbook.Model;
+using Cookbook.ViewModel.User;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,10 +10,10 @@ namespace Cookbook.View.User
     /// </summary>
     public partial class UserView : Window
     {
-        public UserView()
+        public UserView(tblUserData user)
         {
             InitializeComponent();
-            this.DataContext = new UserViewModel(this);
+            this.DataContext = new UserViewModel(this, user);
         }
         private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
