@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Cookbook.View.User"
         mc:Ignorable="d"
-        Title="UpdadeRecipeByUser" Height="300" Width="370">
+        Title="Updade Recipe By User" Height="220" Width="370">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -26,30 +25,13 @@
             <RowDefinition Height="6"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="6"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>            
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="1" Name="lblName" Content="Name: " Padding="0" HorizontalAlignment="Right"/>
         <Label Grid.Column="1" Grid.Row="3" Name="lblType" Content="Type (A/M/D): " Padding="0" HorizontalAlignment="Right"/>
         <Label Grid.Column="1" Grid.Row="5" Name="lblDescription" Content="Description: " Padding="0" HorizontalAlignment="Right"/>
-        <Label Grid.Column="1" Grid.Row="7" Name="lblDateCreated" Content="Date created: " Padding="0" HorizontalAlignment="Right"/>
-        <Label Grid.Column="1" Grid.Row="9" Name="lblPersonsCount" Content="Persons count: " Padding="0" HorizontalAlignment="Right"/>
+        <Label Grid.Column="1" Grid.Row="7" Name="lblPersonsCount" Content="Persons count: " Padding="0" HorizontalAlignment="Right"/>
 
         <TextBox Grid.Column="3" Grid.Row="1" Name="txtName" Height="20" Width="150" 
                  Text="{Binding Recipe.Name, UpdateSourceTrigger=PropertyChanged}"/>
@@ -57,13 +39,11 @@
                  Text="{Binding Recipe.Type, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Grid.Column="3" Grid.Row="5" Name="txtDescription" Height="20" Width="150"
                  Text="{Binding Recipe.Description, UpdateSourceTrigger=PropertyChanged, TargetNullValue=''}"/>
-        <DatePicker Grid.Column="3" Grid.Row="7" Name="DatePicker1" Height="20" Width="150" DisplayDate="1/1/20" 
-                 SelectedDate="{Binding Recipe.DateCreated, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Grid.Column="3" Grid.Row="9" Name="txtPersonsCount" Height="20" Width="150" PreviewTextInput="NumbersTextBox"
+        <TextBox Grid.Column="3" Grid.Row="7" Name="txtPersonsCount" Height="20" Width="150" PreviewTextInput="NumbersTextBox"
                  Text="{Binding Recipe.PersonsCount, UpdateSourceTrigger=PropertyChanged, TargetNullValue=''}"/>
-        <Button Grid.Column="3" Grid.Row="19" Name="btnSave" Content="Save" Height="20" Width="70" HorizontalAlignment="Left"
+        <Button Grid.Column="3" Grid.Row="9" Name="btnSave" Content="Save" Height="20" Width="70" HorizontalAlignment="Left"
                 Command="{Binding Save, UpdateSourceTrigger=PropertyChanged}"/>
-        <Button Grid.Column="3" Grid.Row="19" Name="btnClose" Content="Close" Height="20" Width="70" HorizontalAlignment="Right"
+        <Button Grid.Column="3" Grid.Row="9" Name="btnClose" Content="Close" Height="20" Width="70" HorizontalAlignment="Right"
                 Command="{Binding Close, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>

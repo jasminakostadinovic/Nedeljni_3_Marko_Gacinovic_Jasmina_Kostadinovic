@@ -18,13 +18,7 @@ namespace Cookbook.ViewModel.User
             get { return recipe; }
             set { recipe = value; OnPropertyChanged("Recipe"); }
         }
-
-        private bool isUpdateRecipe;
-        public bool IsUpdateRecipe
-        {
-            get { return isUpdateRecipe; }
-            set { isUpdateRecipe = value; }
-        }
+        public bool IsUpdateRecipe { get; set; }
 
         public UpdadeRecipeByUserModel(UpdadeRecipeByUser updateRecipeOpen, tblRecipe recipeToPass)
         {

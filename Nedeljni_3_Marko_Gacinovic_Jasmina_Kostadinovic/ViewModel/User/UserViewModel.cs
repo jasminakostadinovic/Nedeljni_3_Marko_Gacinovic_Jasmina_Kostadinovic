@@ -19,6 +19,7 @@ namespace Cookbook.ViewModel.User
         #region Constructors
         public UserViewModel(UserView userView, tblUserData user)
         {
+            recipe = new tblRecipe();
             this.userView = userView;
             RecipesData = new RecipesData();
             this.user = user;
@@ -101,6 +102,9 @@ namespace Cookbook.ViewModel.User
 
         private bool CanUpdateRecipeExecute()
         {
+            if (RecipesData.Recipe == null
+                || RecipesData.Recipe.UserDataID != user.UserDataID)
+                return false;
             return true;
         }
 
@@ -108,7 +112,7 @@ namespace Cookbook.ViewModel.User
         {
             try
             {
-                UpdadeRecipeByUser updateRecipe = new UpdadeRecipeByUser(recipe);
+                UpdadeRecipeByUser updateRecipe = new UpdadeRecipeByUser(RecipesData.Recipe);
                 updateRecipe.ShowDialog();
 
                 // updating the lists view
