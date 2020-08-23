@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Cookbook.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic
+namespace Cookbook
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +11,7 @@ namespace Nedeljni_3_Marko_Gacinovic_Jasmina_Kostadinovic
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel(this);
         }
     }
 }
